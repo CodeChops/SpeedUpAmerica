@@ -64,8 +64,6 @@ def remove_nulls(all_bounds)
     zip_bounds.each do |item|
       if ((item[0] === 0.0) || (item[1] === 0.0))
         puts "Found a null!"
-      elsif (item[0].nan? || item[1].nan?)
-        puts "#{item} contains a NaN!"
       else
         new_bounds << item
       end
